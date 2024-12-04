@@ -1,11 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { registerUser, loginUser } = require('../controllers/userController');
+const { createUser } = require('../controllers/userController'); // Assuming you have a controller function
 
-// User registration route
-router.post('/register', registerUser);
-
-// User login route
-router.post('/login', loginUser);
+// POST route for creating a user
+router.post('/users', createUser);  // This route requires a callback function
 
 module.exports = router;
